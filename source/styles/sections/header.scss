@@ -1,0 +1,26 @@
+.header {
+  background: #eff0f2;
+
+  &__top {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 0 250px;
+
+    .logo__picture {
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    padding-bottom: 100px;
+    color: #505050;
+
+    .header__title {
+      font-family: $ff-main-bold;
+      text-transform: uppercase;
+    }
+  }
+}
