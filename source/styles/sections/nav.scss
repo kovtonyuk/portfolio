@@ -4,11 +4,12 @@ $color-span: #606061;
 $color-link: #2b3231;
 
 $button-height: 27px;
-$button-width: 35px;
+$button-width: 30px;
 
 .button_container {
   position: absolute;
-  right: 0;
+  top: 77px;
+  right: 3px;
   height: $button-height;
   width: $button-width;
   cursor: pointer;
