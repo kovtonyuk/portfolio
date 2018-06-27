@@ -1,11 +1,11 @@
-$('.about__img-bg').children(":first").addClass('isActive');
+$('.about__item > div:first-child').addClass('isActive');
 
 function rotateClass() {
-    $('.carousel > *.isActive').appendTo('.carousel').removeClass('isActive');
-    $('.carousel').children(":first").addClass('isActive');
+    $('.about__item > .isActive').appendTo('.about__item').removeClass('isActive');
+    $('.about__item > div:first-child').addClass('isActive');
 }
 
 // Set the Delay Time
 setInterval(function () {
     rotateClass();
-}, 30000);
+}, 3000);
