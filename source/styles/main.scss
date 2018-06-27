@@ -4,11 +4,14 @@
 @import "global/mixins";
 @import "global/fonts";
 @import "global/vars";
+@import "global/button";
+@import "global/title";
 @import "global/base";
 @import "global/common";
 @import "global/sprite";
 @import "global/icons";
-@import "global/button";
+
 
 @import "sections/header";
 @import "sections/nav";
+@import "sections/about";

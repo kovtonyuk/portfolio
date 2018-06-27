@@ -1,0 +1,26 @@
+.title {
+  padding: 110px 0;
+  color: #181919;
+  text-align: center;
+
+  &__header {
+    font-family: $ff-main-bold;
+    font-size: 2.4rem;
+    line-height: 0.1;
+    letter-spacing: 2px;
+  }
+
+  &__text {
+    font-family: $ff-main-light;
+    font-size: 1rem;
+    letter-spacing: 4px;
+
+    @media (max-width: 699px) {
+      margin: 0 40px;
+    }
+  }
+
+  &__uppercase {
+    text-transform: uppercase;
+  }
+}
