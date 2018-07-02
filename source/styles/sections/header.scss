@@ -32,6 +32,10 @@
       position: absolute;
       right: 94px;
       bottom: 135px;
+
+      @media (max-width: 700px) {
+        display: none;
+      }
     }
   }
 }

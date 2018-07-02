@@ -6,16 +6,9 @@
 
   &__img-bg {
     position: relative;
-    display: inline-block;
-    opacity: 0;
-    transition: 1s ease;
 
     @media (max-width: 1079px) {
       margin: 0 auto 60px;
-    }
-
-    &.isActive {
-      opacity: 1;
     }
   }
 
@@ -99,4 +92,3 @@
     font-family: $ff-main-light;
   }
 }
-
