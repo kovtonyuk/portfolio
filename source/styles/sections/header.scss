@@ -11,6 +11,10 @@
       position: absolute;
       left: 0;
     }
+
+    @media (max-width: 1180px) {
+      margin: 0 50px;
+    }
   }
 
   &__bottom {
@@ -26,6 +30,11 @@
       letter-spacing: 4px;
       line-height: 1.4;
       padding-bottom: 86px;
+
+      @media (max-width: 1080px) {
+        padding: 0 50px;
+        font-size: 2rem;
+      }
     }
 
     .juice {

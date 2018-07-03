@@ -15,23 +15,32 @@
 
   &__list {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin: 47px 0;
     padding: 0;
+
+    @media (max-width: 1300px) {
+      justify-content: center;
+    }
   }
 
   &__item {
-    width: 27%;
-    margin: 0 10px;
 
-    @media (max-width: 750px) {
-      width: 50%;
+    @media (max-width: 1300px) {
+      width: 38%;
+    }
+
+    @media (max-width: 1080px) {
+      width: auto;
+      margin: 0 10px;
     }
 
     img {
-      width: 100%;
       margin-bottom: 10px;
+
+      @media (max-width: 450px) {
+        width: 90%;
+      }
     }
   }
 }
