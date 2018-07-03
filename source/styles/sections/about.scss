@@ -4,22 +4,71 @@
   background: #f8fafa;
   padding-bottom: 155px;
 
-  &__img-bg {
-    position: relative;
+  .about__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0 42px;
+
+    @media (max-width: 1080px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .about__header {
+    margin: 0;
+    font-size: 1.375rem;
+    font-family: $ff-main-bold;
+  }
+
+  .about__description {
+    margin-top: -9px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: left;
+    padding-bottom: 44px;
+    font-family: $ff-main-light;
+  }
+
+  .about__item {
+    margin: 30px 38px;
+    text-align: center;
+    white-space: nowrap;
+
+    @media (max-width: 600px) {
+      margin: 0 10px;
+    }
+  }
+
+  .about__item--text {
+    margin: 30px 38px;
+    margin-left: 119px;
+
+    @media (max-width: 1080px) {
+      margin: 0;
+      padding: 0 30px;
+    }
+  }
+
+  .about__img-bg {
+    position: absolute;
     display: inline-block;
     opacity: 0;
     transition: 1s ease;
 
+    &.isActive {
+      opacity: 1;
+      position: relative;
+    }
+
     @media (max-width: 1079px) {
       margin: 0 auto 60px;
     }
-
-    &.isActive {
-      opacity: 1;
-    }
   }
 
-  &__img-bg:before {
+  .about__img-bg:before {
     content: '';
     display: block;
     background: #eeeff1;
@@ -42,7 +91,7 @@
     }
   }
 
-  &__img {
+  .about__img {
     position: relative;
     z-index: 1;
     box-shadow: 0 0 30px rgba(0,0,0,0.3);
@@ -51,52 +100,4 @@
       width: 100%;
     }
   }
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    margin: 0;
-    padding: 0 42px;
-
-    @media (max-width: 1080px) {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
-
-  &__item {
-    margin: 30px 38px;
-    text-align: center;
-
-    @media (max-width: 600px) {
-      margin: 0 10px;
-    }
-
-    &--text {
-      margin: 30px 38px;
-      margin-left: 119px;
-
-      @media (max-width: 1080px) {
-        margin: 0;
-        padding: 0 30px;
-      }
-    }
-  }
-
-  &__header {
-    margin: 0;
-    font-size: 1.375rem;
-    font-family: $ff-main-bold;
-  }
-
-  &__description {
-    margin-top: -9px;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    text-align: left;
-    padding-bottom: 44px;
-    font-family: $ff-main-light;
-  }
 }
-
