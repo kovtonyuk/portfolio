@@ -8,4 +8,4 @@ function rotateClass() {
 // Set the Delay Time
 setInterval(function () {
     rotateClass();
-}, 3000);
+}, 5000);

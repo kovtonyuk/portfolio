@@ -131,6 +131,10 @@
         left: 0;
         right: 0;
         z-index: 1;
+
+        @media (max-width: 800px) {
+          bottom: 5px;
+        }
       }
 
       @media (max-width: 1250px) {
