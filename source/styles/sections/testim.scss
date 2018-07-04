@@ -4,47 +4,6 @@
   background: #f8fafa;
   padding-bottom: 155px;
 
-  &__img-bg {
-    position: relative;
-
-    @media (max-width: 1079px) {
-      margin: 0 auto 60px;
-    }
-  }
-
-  &__img-bg:before {
-    content: '';
-    display: block;
-    background: #eeeff1;
-    position: absolute;
-    top: 35px;
-    bottom: 35px;
-    left: -43px;
-    right: -43px;
-    z-index: 0;
-
-    @media (max-width: 600px) {
-      margin: 20px;
-      top: 5px;
-      bottom: 5px;
-    }
-
-    @media (max-width: 380px) {
-      top: -10px;
-      bottom: -10px;
-    }
-  }
-
-  &__img {
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 0 30px rgba(0,0,0,0.3);
-
-    @media (max-width: 600px) {
-      width: 100%;
-    }
-  }
-
   &__list {
     display: flex;
     justify-content: space-between;
@@ -59,21 +18,84 @@
   }
 
   &__item {
+    position: relative;
     margin: 30px 38px;
     text-align: center;
+    white-space: nowrap;
 
     @media (max-width: 600px) {
       margin: 0 10px;
     }
 
     &--text {
-      margin: 30px 38px;
+      margin: 15% 38px;
       margin-left: 119px;
 
       @media (max-width: 1080px) {
         margin: 0;
         padding: 0 30px;
       }
+    }
+  }
+
+  &_slide {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    transition: 1s ease;
+
+    &.isActive {
+      opacity: 1;
+      position: relative;
+    }
+  }
+
+  &__img-bg {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    transition: 1s ease;
+
+    &.isActive {
+      opacity: 1;
+      position: relative;
+    }
+
+    @media (max-width: 1079px) {
+      margin: 0 auto 60px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      background: #eeeff1;
+      position: absolute;
+      top: 35px;
+      bottom: 35px;
+      left: -43px;
+      right: -43px;
+      z-index: 0;
+
+      @media (max-width: 600px) {
+        margin: 20px;
+        top: 5px;
+        bottom: 5px;
+      }
+
+      @media (max-width: 380px) {
+        top: -10px;
+        bottom: -10px;
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+
+    @media (max-width: 600px) {
+      width: 100%;
     }
   }
 
