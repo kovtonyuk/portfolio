@@ -2,9 +2,9 @@
   position: relative;
   color: #3e3f3f;
   background: #f8fafa;
-  padding-bottom: 155px;
+  padding-bottom: 150px;
 
-  &__list {
+  &__content {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -17,40 +17,16 @@
     }
   }
 
-  &__item {
-    position: relative;
-    margin: 30px 38px;
-    text-align: center;
-    white-space: nowrap;
-
-    @media (max-width: 600px) {
-      margin: 0 10px;
-    }
-
-    &--text {
-      margin: 30px 38px;
-      margin-left: 119px;
-
-      @media (max-width: 1080px) {
-        margin: 0;
-        padding: 0 30px;
-      }
-    }
+  &__carousel {
+    margin: 34px 0 34px 39px
   }
 
-  &__img-bg {
-    position: absolute;
-    display: block;
-    opacity: 0;
-    transition: 1s ease;
+  &__list {
+    position: relative;
 
-    &.isActive {
-      opacity: 1;
-      position: relative;
-    }
-
-    @media (max-width: 1079px) {
-      margin: 0 auto 60px;
+    @media (max-width: 1080px) {
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     &:before {
@@ -74,6 +50,51 @@
         top: -10px;
         bottom: -10px;
       }
+    }
+  }
+
+  &_slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 2s, visibility 0s;
+    z-index: 9;
+
+    @media (max-width: 1080px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &.isActive {
+      visibility: visible;
+      opacity: 1;
+      position: relative;
+    }
+  }
+
+  &__item {
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+
+    @media (max-width: 600px) {
+      margin: 0 10px;
+    }
+  }
+
+  &__img-bg {
+
+    @media (max-width: 1079px) {
+      margin: 0 auto 60px;
+    }
+  }
+
+  &__item--text {
+    margin: 34px auto 0 176px;
+
+    @media (max-width: 1080px) {
+      margin: 10px 0;
     }
   }
 
@@ -101,4 +122,16 @@
     padding-bottom: 44px;
     font-family: $ff-main-light;
   }
+}
+
+.someOtherSlider__nav {
+  margin-top: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.someOtherSlider--prev, .someOtherSlider--next {
+  display: inline-block;
+  cursor: pointer;
 }
