@@ -120,7 +120,7 @@
 
 .slider__nav {
   margin-top: 30px;
-  text-align: center;
+  text-align: right;
   position: relative;
   z-index: 10;
 }
@@ -128,4 +128,14 @@
 .slider__nav--prev, .slider__nav--next {
   display: inline-block;
   cursor: pointer;
+  font-size: 2rem;
+  color: #bdbdbd;
+  margin-right: 20px;
+  padding: 5px 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+
+  &:hover {
+    color: #2f6763;
+    background: #71f6eb;
+  }
 }

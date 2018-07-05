@@ -83,7 +83,7 @@ var sliderConfig = {
     sliderItemActive: 'isActive',
     sliderPrev: '.slider__nav--prev',
     sliderNext: '.slider__nav--next',
-    sliderTiming: 5000
+    sliderTiming: 50000
 };
 
 Slider(sliderConfig);
