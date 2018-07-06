@@ -2,7 +2,7 @@
   position: relative;
   color: #3e3f3f;
   background: #f8fafa;
-  padding-bottom: 142px;
+  padding-bottom: 155px;
 
   .title {
     padding: 100px 0;
@@ -14,29 +14,6 @@
     @media (max-width: 1080px) {
       flex-wrap: wrap;
       justify-content: center;
-    }
-
-    &:before {
-      content: '';
-      display: block;
-      background: #eeeff1;
-      position: absolute;
-      top: 35px;
-      bottom: 35px;
-      left: -43px;
-      right: -43px;
-      z-index: 0;
-
-      @media (max-width: 600px) {
-        margin: 20px;
-        top: 5px;
-        bottom: 5px;
-      }
-
-      @media (max-width: 380px) {
-        top: -10px;
-        bottom: -10px;
-      }
     }
   }
 
@@ -142,7 +119,7 @@
 }
 
 .slider__nav {
-  margin-top: -65px;
+  margin-top: 30px;
   text-align: right;
   position: relative;
   z-index: 10;

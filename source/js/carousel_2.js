@@ -1,10 +1,3 @@
-/* ========================================================================
- * Bootstrap: carousel.js v3.3.7
- * http://getbootstrap.com/javascript/#carousel
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
 +function ($) {
     'use strict';
 
@@ -235,14 +228,8 @@
 }(jQuery);
 
 
-$('.about__carousel').carousel({
-    interval: 5000,
-    pause: "hover",
-    wrap: true
-});
-
-$('.testim__carousel').carousel({
-    interval: 5000,
+$('.carousel').carousel({
+    interval: 50000,
     pause: "hover",
     wrap: true
 });

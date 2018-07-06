@@ -2,83 +2,34 @@
   position: relative;
   color: #3e3f3f;
   background: #f8fafa;
-  padding-bottom: 142px;
+  padding-bottom: 93px;
 
-  .title {
-    padding: 100px 0;
-  }
-
-  &__list {
-    position: relative;
-
-    @media (max-width: 1080px) {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    &:before {
-      content: '';
-      display: block;
-      background: #eeeff1;
-      position: absolute;
-      top: 35px;
-      bottom: 35px;
-      left: -43px;
-      right: -43px;
-      z-index: 0;
-
-      @media (max-width: 600px) {
-        margin: 20px;
-        top: 5px;
-        bottom: 5px;
-      }
-
-      @media (max-width: 380px) {
-        top: -10px;
-        bottom: -10px;
-      }
-    }
-  }
-
-  &_slide {
+  &__content {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     margin: 0;
+    position: relative;
     padding: 0 42px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    transition: opacity 2s, visibility 0s;
 
     @media (max-width: 1080px) {
       flex-wrap: wrap;
       justify-content: center;
     }
 
-    &.isActive {
-      visibility: visible;
-      opacity: 1;
-      position: relative;
-    }
-  }
-
-  &__item {
-    position: relative;
-    margin: 30px 38px;
-    text-align: center;
-    white-space: nowrap;
-
     @media (max-width: 600px) {
-      margin: 0 10px;
+      padding: 0 20px;
     }
   }
 
-  &__img-bg {
+  &__list {
+    position: relative;
+    margin: 50px;
 
-    @media (max-width: 1079px) {
-      margin: 0 auto 60px;
+    @media (max-width: 1080px) {
+      //flex-wrap: wrap;
+      //justify-content: center;
+      margin: 50px;
     }
 
     &:before {
@@ -91,6 +42,12 @@
       left: -43px;
       right: -43px;
       z-index: 0;
+
+      @media (max-width: 1200px) {
+        margin: 50px;
+        top: -20px;
+        bottom: -20px;
+      }
 
       @media (max-width: 600px) {
         margin: 20px;
@@ -106,22 +63,10 @@
   }
 
   &__item--text {
-    margin: 15% 38px;
-    margin-left: 119px;
+    margin: 15% auto 0 176px;
 
     @media (max-width: 1080px) {
-      margin: 0;
-      padding: 0 30px;
-    }
-  }
-
-  &__img {
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 0 30px rgba(0,0,0,0.3);
-
-    @media (max-width: 600px) {
-      width: 100%;
+      margin: 10px 0;
     }
   }
 
@@ -139,26 +84,166 @@
     padding-bottom: 44px;
     font-family: $ff-main-light;
   }
+
+  &__img {
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 600px) {
+      width: 90%;
+      height: 90%;
+    }
+  }
 }
 
-.slider__nav {
-  margin-top: -65px;
-  text-align: right;
+
+/*------------ Carousel ------------*/
+
+// Wrapper for the slide container and indicators
+.carousel {
   position: relative;
-  z-index: 10;
 }
 
-.slider__nav--prev, .slider__nav--next {
-  display: inline-block;
-  cursor: pointer;
-  font-size: 2rem;
-  color: #bdbdbd;
-  margin-right: 20px;
-  padding: 5px 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+.testim_carousel-inner {
+  position: relative;
+  overflow: hidden;
 
-  &:hover {
-    color: #2f6763;
-    background: #71f6eb;
+  .item {
+    display: none;
+    position: relative;
+  }
+  .active, .next, .prev {
+    display: block;
+  }
+  .active {
+    left: 0;
+  }
+  .next, .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .next {
+    left: 100%;
+  }
+  .prev {
+    left: -100%;
+  }
+  .next.left, .prev.right {
+    left: 0;
+  }
+  .active {
+    &.left {
+      left: -100%;
+    }
+    &.right {
+      left: 100%;
+    }
+  }
+}
+
+/*------------ Carousel indicators ------------*/
+
+.carousel-indicators {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  margin-left: -30%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+  li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #d0d0d0;
+  }
+  .active {
+    margin: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #71f6eb;
+  }
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 20px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  .btn {
+    text-shadow: none;
+  }
+}
+
+// Controls
+//.controls {
+//  position: absolute;
+//  right: 50px;
+//}
+
+.carousel-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+
+  &-next {
+    left: auto;
+    right: 0;
+  }
+  &:hover, &:focus {
+    outline: 0;
+    text-decoration: none;
+  }
+  .icon-prev, .icon-next, .fa-angle-left, .fa-angle-right {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    z-index: 5;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #bdbdbd;
+    margin-right: 20px;
+    padding: 5px 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+
+    &:hover {
+      color: #2f6763;
+      background: #71f6eb;
+    }
+  }
+  .icon-prev, .fa-angle-left {
+    left: 50%;
+    margin-left: -10px;
+  }
+  .icon-next, .fa-angle-right {
+    right: 50%;
+    margin-right: -10px;
+  }
+  .icon-prev, .icon-next {
+    width: 20px;
+    height: 20px;
+    line-height: 1;
+    font-family: serif;
+  }
+  .icon-prev:before {
+    content: '\2039';
+  }
+  .icon-next:before {
+    content: '\203a';
   }
 }
