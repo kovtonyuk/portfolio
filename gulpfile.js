@@ -52,7 +52,7 @@ gulp.task('js', function() {
             //'source/js/send_form.js',
             //'source/js/main.js'
             'source/js/toggle_menu.js',
-            'source/js/carousel.js'
+            'source/js/carousel_2.js'
         ])
         .pipe(sourcemaps.init())
         .pipe(concat('main.min.js'))

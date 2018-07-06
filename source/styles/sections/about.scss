@@ -2,7 +2,7 @@
   position: relative;
   color: #3e3f3f;
   background: #f8fafa;
-  padding-bottom: 150px;
+  padding-bottom: 93px;
 
   &__content {
     display: flex;
@@ -124,11 +124,12 @@
   }
 }
 
-.someOtherSlider__nav {
-  margin-top: 30px;
-  text-align: center;
-  position: relative;
-  z-index: 10;
+//.someOtherSlider__nav
+ .carousel-indicators {
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
 .someOtherSlider--prev, .someOtherSlider--next {

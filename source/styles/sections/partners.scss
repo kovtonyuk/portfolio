@@ -1,0 +1,19 @@
+.partners {
+  position: relative;
+  color: #3e3f3f;
+  padding-bottom: 155px;
+
+  .icon__list--1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 91px 0 0;
+  }
+
+  .icon__list--2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 31px 0;
+  }
+}

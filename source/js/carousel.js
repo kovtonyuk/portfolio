@@ -1,16 +1,3 @@
-// function slider(cssClass, timing) {
-//     $(cssClass + ' > div:first-child').addClass('isActive');
-//
-//     setInterval(function () {
-//         $(cssClass + ' .isActive').appendTo(cssClass).removeClass('isActive');
-//         $(cssClass + ' > div:first-child').addClass('isActive');
-//     }, timing);
-// }
-//
-// slider('.about__list', 30000);
-// slider('.testim__list', 40000);
-
-
 function Slider(config) {
     var sliderInterval = function() {};
     var sliderBlock = document.querySelector(config.sliderBlock);
@@ -87,4 +74,3 @@ var sliderConfig = {
 };
 
 Slider(sliderConfig);
-
