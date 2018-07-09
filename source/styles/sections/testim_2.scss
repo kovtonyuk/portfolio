@@ -2,7 +2,7 @@
   position: relative;
   color: #3e3f3f;
   background: #f8fafa;
-  padding-bottom: 93px;
+  padding-bottom: 181px;
 
   &__content {
     display: flex;
@@ -10,7 +10,6 @@
     flex-wrap: nowrap;
     margin: 0;
     position: relative;
-    padding: 0 42px;
 
     @media (max-width: 1080px) {
       flex-wrap: wrap;
@@ -24,7 +23,6 @@
 
   &__list {
     position: relative;
-    margin: 50px;
 
     @media (max-width: 1080px) {
       //flex-wrap: wrap;
@@ -63,10 +61,12 @@
   }
 
   &__item--text {
-    margin: 15% auto 0 176px;
+    margin: 12% auto 0 176px;
+    text-align: center;
 
     @media (max-width: 1080px) {
-      margin: 10px 0;
+      margin: 50px 0;
+      padding: 0 50px;
     }
   }
 
@@ -80,7 +80,6 @@
     margin-top: -9px;
     font-size: 1.1rem;
     line-height: 1.5;
-    text-align: left;
     padding-bottom: 44px;
     font-family: $ff-main-light;
   }
@@ -100,8 +99,9 @@
 /*------------ Carousel ------------*/
 
 // Wrapper for the slide container and indicators
-.carousel {
+.testim_carousel {
   position: relative;
+  margin: 0 41px;
 }
 
 .testim_carousel-inner {

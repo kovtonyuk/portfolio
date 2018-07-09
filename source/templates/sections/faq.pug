@@ -1,0 +1,33 @@
+section.faq#faq
+    .container
+
+        .faq__list
+            .faq__item.form__item
+                    form(method="post" action="#").form
+
+                        .form__fields
+                            input.form__input(type='text' placeholder="Your Name" autocomplete='text' data-valid='required')
+                            input.form__input(type='text' placeholder="Subject" autocomplete='text' data-valid='required')
+                            input.form__input(type="email" placeholder="Your email" autocomplete='email' data-valid='required' data-email)
+                            textarea.form__input(rows="10" cols="45" name="text" placeholder="Message")
+
+                        button(type="submit").button.button--form.button--text-uppercase Submit message
+
+            .faq__item.faq__text
+                .faq__description
+                    | Adress line 1
+                    br
+                    | Adress line 2
+                    br
+                    | Phone: +548 945645
+                    br
+                    | Fax: +456456 54546
+                    br
+                    br
+                    | Web: www.designagency.net
+                    br
+                    | E-mail: info@designagency.net
+                    .faq__map
+                        img(src="images/map.png" alt="map")
+
+

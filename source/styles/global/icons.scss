@@ -4,6 +4,7 @@
 
 .icon-rko {
   @include sprite($rko);
+  filter: grayscale(1);
   //transition: all ease-in-out 1s;
   //
   //&:hover {
@@ -13,6 +14,7 @@
 
 .icon-audiopro {
   @include sprite($audiopro);
+  filter: grayscale(1);
   //transition: all ease-in-out 1s;
   //
   //&:hover {
@@ -22,6 +24,7 @@
 
 .icon-infinity {
   @include sprite($infinity);
+  filter: grayscale(1);
   //margin-bottom: 27px;
   //height: 94px;
   //transition: all ease-in-out 1s;
@@ -33,6 +36,7 @@
 
 .icon-sport {
   @include sprite($sport);
+  filter: grayscale(1);
   //transition: all ease-in-out 1s;
   //
   //&:hover {
@@ -42,6 +46,7 @@
 
 .icon-swan {
   @include sprite($swan);
+  filter: grayscale(1);
   //margin-bottom: 25px;
   //transition: all ease-in-out 1s;
   //
@@ -52,6 +57,7 @@
 
 .icon-swancer{
   @include sprite($swancer);
+  filter: grayscale(1);
   //transition: all ease-in-out 1s;
   //
   //&:hover {
@@ -61,6 +67,7 @@
 
 .icon-audiopro2 {
   @include sprite($audiopro_2);
+  filter: grayscale(1);
   //transition: all ease-in-out 1s;
   //
   //&:hover {
@@ -70,6 +77,7 @@
 
 .icon-infinity2 {
   @include sprite($infinity_2);
+  filter: grayscale(1);
   //margin-bottom: 26px;
   //transition: all ease-in-out 1s;
   //
@@ -80,6 +88,7 @@
 
 .icon-rko2 {
   @include sprite($rko_2);
+  filter: grayscale(1);
   //transition: all ease-in-out 1s;
   //
   //&:hover {

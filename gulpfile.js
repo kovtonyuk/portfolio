@@ -44,12 +44,12 @@ gulp.task('styles:compile', function() {
 /*------------ JS ------------*/
 gulp.task('js', function() {
     return gulp.src([
-            //'source/js/init.js',
+            'source/js/init.js',
             //'source/js/accordion.js',
             //'source/js/accordion_faq.js',
             //'source/js/scroll.js',
-            //'source/js/form.js',
-            //'source/js/send_form.js',
+            'source/js/form.js',
+            'source/js/send_form.js',
             //'source/js/main.js'
             'source/js/toggle_menu.js',
             'source/js/carousel_2.js'
