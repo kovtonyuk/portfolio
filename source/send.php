@@ -10,6 +10,7 @@ if (isset($_POST['submit'])) { //Проверка отправилось ли н
                     </head>
                     <body>
                         <p>Имя: ' . $_POST['name'] . '</p>
+                        <p>Тема: ' . $_POST['subject'] . '</p>
                         <p>Email: ' . $_POST['email'] . '</p>                        
                         <p>Сообщение: ' . $_POST['message'] . '</p>                        
                     </body>

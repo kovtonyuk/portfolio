@@ -229,7 +229,7 @@
 
 
 $('.carousel').carousel({
-    interval: 50000,
+    interval: 5000,
     pause: "hover",
     wrap: true
 });

@@ -1,0 +1,46 @@
+.footer {
+  padding: 26px;
+  text-align: center;
+  background: #262b2e;
+  color: #969798;
+
+  &__title {
+    margin-bottom: 37px;
+    font-size: 1.8125rem;
+    font-family: $ff-main-bold;
+  }
+
+  &__social {
+    margin-left: 20px;
+    padding: 15px;
+    background: #424648;
+    border-radius: 3px;
+
+    &:hover {
+     background: #6eeee4;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__links {
+    margin-bottom: 48px;
+    color: #bbb8b9;
+
+    .fa {
+      color: #bbb8b9;
+
+      &:hover {
+        color: #081e1c;
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    font-size: 0.875rem;
+    color: #cecece;
+  }
+}

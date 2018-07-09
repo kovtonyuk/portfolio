@@ -8,7 +8,7 @@ $(document).ready(function(){
             success: function () {
                 //код в этом блоке выполняется при успешной отправке сообщения
                 alert("Ваше сообщение отпрвлено!");
-                window.location.href = "http://4893v1qa.idua.org/"
+                window.location.href = "#"
             }
         });
     });
