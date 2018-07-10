@@ -5,16 +5,15 @@
   color: #969798;
 
   &__title {
-    margin-bottom: 37px;
-    font-size: 1.8125rem;
-    font-family: $ff-main-bold;
+    margin-top: 73px;
+    font-size: 1rem;
+    font-family: $ff-main-light;
   }
 
   &__social {
-    margin-left: 20px;
-    padding: 15px;
+    margin-left: 10px;
+    padding: 12px 15px;
     background: #424648;
-    border-radius: 3px;
 
     &:hover {
      background: #6eeee4;
@@ -26,11 +25,12 @@
   }
 
   &__links {
-    margin-bottom: 48px;
+    margin: 37px auto 61px;
     color: #bbb8b9;
 
     .fa {
       color: #bbb8b9;
+      font-size: 1.34rem;
 
       &:hover {
         color: #081e1c;
@@ -39,8 +39,8 @@
   }
 
   &__text {
-    margin-bottom: 30px;
-    font-size: 0.875rem;
+    margin-bottom: 70px;
+    font-size: 1rem;
     color: #cecece;
   }
 }

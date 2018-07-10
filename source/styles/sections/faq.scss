@@ -1,6 +1,6 @@
 .faq {
   position: relative;
-  padding-bottom: 150px;
+  padding-bottom: 123px;
 
   @media (min-width: 320px) and (max-width: 810px) {
     padding: 50px 0 55px 0;
@@ -11,6 +11,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 120px;
+
+    @media (max-width: 1250px) {
+      margin: 0 50px;
+    }
   }
 
   &:before {
@@ -28,6 +32,12 @@
 
   .form__item {
     width: 54%;
+
+    @media (max-width: 1080px) {
+      margin: 0 auto;
+      width: 80%;
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -83,6 +93,11 @@
 .faq__text {
   width: 44%;
   background-color: rgba(2,22,35,0.71);
+
+  @media (max-width: 1080px) {
+    margin: 0 auto;
+    width: 80%;
+  }
 }
 
 .faq__description {
