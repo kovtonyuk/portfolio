@@ -71,42 +71,5 @@
     outline: 0;
     text-decoration: none;
   }
-  .icon-prev, .icon-next, .fa-angle-left, .fa-angle-right {
-    position: absolute;
-    top: 50%;
-    margin-top: -10px;
-    z-index: 5;
-    display: inline-block;
-    cursor: pointer;
-    font-size: 2rem;
-    color: #bdbdbd;
-    margin-right: 20px;
-    padding: 11px 21px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
 
-    &:hover {
-      color: #2f6763;
-      background: #71f6eb;
-    }
-  }
-  .icon-prev, .fa-angle-left {
-    right: 50%;
-    //margin-left: -10px;
-  }
-  .icon-next, .fa-angle-right {
-    left: 50%;
-    //margin-right: -10px;
-  }
-  .icon-prev, .icon-next {
-    width: 20px;
-    height: 20px;
-    line-height: 1;
-    font-family: serif;
-  }
-  .icon-prev:before {
-    content: '\2039';
-  }
-  .icon-next:before {
-    content: '\203a';
-  }
 }

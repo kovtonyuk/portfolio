@@ -50,9 +50,9 @@ gulp.task('js', function() {
             'source/js/scroll.js',
             'source/js/form.js',
             'source/js/send_form.js',
-            //'source/js/main.js'
+            //'source/js/main.js',
             'source/js/toggle_menu.js',
-            'source/js/carousel_2.js'
+            'source/js/carousel.js'
         ])
         .pipe(sourcemaps.init())
         .pipe(concat('main.min.js'))
