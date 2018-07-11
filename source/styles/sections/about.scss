@@ -2,7 +2,7 @@
   position: relative;
   color: #3e3f3f;
   background: #f8fafa;
-  padding-bottom: 93px;
+  padding-bottom: 138px;
 
   &__content {
     display: flex;
@@ -15,10 +15,6 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-  }
-
-  &__carousel {
-    margin: 34px 0 34px 39px
   }
 
   &__list {
@@ -53,58 +49,11 @@
     }
   }
 
-  &_slide {
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    transition: opacity 2s, visibility 0s;
-    z-index: 9;
-
-    @media (max-width: 1080px) {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    &.isActive {
-      visibility: visible;
-      opacity: 1;
-      position: relative;
-    }
-  }
-
-  &__item {
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-
-    @media (max-width: 600px) {
-      margin: 0 10px;
-    }
-  }
-
-  &__img-bg {
-
-    @media (max-width: 1079px) {
-      margin: 0 auto 60px;
-    }
-  }
-
   &__item--text {
-    margin: 34px auto 0 176px;
+    margin: 28px auto 0 105px;
 
     @media (max-width: 1080px) {
-      margin: 10px 0;
-    }
-  }
-
-  &__img {
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 0 30px rgba(0,0,0,0.3);
-
-    @media (max-width: 600px) {
-      width: 100%;
+      margin: 70px 0;
     }
   }
 
@@ -122,27 +71,66 @@
     padding-bottom: 44px;
     font-family: $ff-main-light;
   }
-}
 
-//.someOtherSlider__nav
- .carousel-indicators {
-    margin-top: 30px;
-    text-align: center;
+  &__img {
     position: relative;
-    z-index: 10;
+    z-index: 1;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
 }
 
-.someOtherSlider--prev, .someOtherSlider--next {
-  display: inline-block;
-  cursor: pointer;
-  font-size: 2rem;
-  color: #bdbdbd;
-  margin-right: 20px;
-  padding: 5px 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 
-  &:hover {
-    color: #2f6763;
-    background: #71f6eb;
+/*------------ Carousel ------------*/
+
+// Wrapper for the slide container and indicators
+.carousel {
+  position: relative;
+  margin: 29px 50px;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+
+  @media (max-width: 1080px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .item {
+    display: none;
+    position: relative;
+  }
+  .active, .next, .prev {
+    display: block;
+  }
+  .active {
+    left: 0;
+  }
+  .next, .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .next {
+    left: 100%;
+  }
+  .prev {
+    left: -100%;
+  }
+  .next.left, .prev.right {
+    left: 0;
+  }
+  .active {
+    &.left {
+      left: -100%;
+    }
+    &.right {
+      left: 100%;
+    }
   }
 }

@@ -2,60 +2,32 @@
   position: relative;
   color: #3e3f3f;
   background: #f8fafa;
-  padding-bottom: 155px;
+  padding-bottom: 181px;
 
-  .title {
-    padding: 100px 0;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 0;
+    position: relative;
+
+    @media (max-width: 1080px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+      padding: 0 20px;
+    }
   }
 
   &__list {
     position: relative;
 
     @media (max-width: 1080px) {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
-
-  &_slide {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    margin: 0;
-    padding: 0 42px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    transition: opacity 2s, visibility 0s;
-
-    @media (max-width: 1080px) {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    &.isActive {
-      visibility: visible;
-      opacity: 1;
-      position: relative;
-    }
-  }
-
-  &__item {
-    position: relative;
-    margin: 30px 38px;
-    text-align: center;
-    white-space: nowrap;
-
-    @media (max-width: 600px) {
-      margin: 0 10px;
-    }
-  }
-
-  &__img-bg {
-
-    @media (max-width: 1079px) {
-      margin: 0 auto 60px;
+      //flex-wrap: wrap;
+      //justify-content: center;
+      margin: 50px;
     }
 
     &:before {
@@ -68,6 +40,12 @@
       left: -43px;
       right: -43px;
       z-index: 0;
+
+      @media (max-width: 1200px) {
+        margin: 50px;
+        top: -20px;
+        bottom: -20px;
+      }
 
       @media (max-width: 600px) {
         margin: 20px;
@@ -83,22 +61,12 @@
   }
 
   &__item--text {
-    margin: 15% 38px;
-    margin-left: 119px;
+    margin: 12% auto 0 176px;
+    text-align: center;
 
     @media (max-width: 1080px) {
-      margin: 0;
-      padding: 0 30px;
-    }
-  }
-
-  &__img {
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 0 30px rgba(0,0,0,0.3);
-
-    @media (max-width: 600px) {
-      width: 100%;
+      margin: 50px 0;
+      padding: 0 50px;
     }
   }
 
@@ -112,30 +80,72 @@
     margin-top: -9px;
     font-size: 1.1rem;
     line-height: 1.5;
-    text-align: left;
     padding-bottom: 44px;
     font-family: $ff-main-light;
   }
-}
 
-.slider__nav {
-  margin-top: 30px;
-  text-align: right;
-  position: relative;
-  z-index: 10;
-}
+  &__img {
+    position: relative;
+    z-index: 1;
 
-.slider__nav--prev, .slider__nav--next {
-  display: inline-block;
-  cursor: pointer;
-  font-size: 2rem;
-  color: #bdbdbd;
-  margin-right: 20px;
-  padding: 5px 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-
-  &:hover {
-    color: #2f6763;
-    background: #71f6eb;
+    @media (max-width: 600px) {
+      width: 90%;
+      height: 90%;
+    }
   }
+}
+
+
+/*------------ Carousel ------------*/
+
+// Wrapper for the slide container and indicators
+.testim_carousel {
+  position: relative;
+  margin: 0 41px;
+}
+
+.testim_carousel-inner {
+  position: relative;
+  overflow: hidden;
+
+  .item {
+    display: none;
+    position: relative;
+  }
+  .active, .next, .prev {
+    display: block;
+  }
+  .active {
+    left: 0;
+  }
+  .next, .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .next {
+    left: 100%;
+  }
+  .prev {
+    left: -100%;
+  }
+  .next.left, .prev.right {
+    left: 0;
+  }
+  .active {
+    &.left {
+      left: -100%;
+    }
+    &.right {
+      left: 100%;
+    }
+  }
+}
+
+.testim__controls {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
 }

@@ -6,44 +6,28 @@ section#about.about
 
         .about__content
 
-            .about__carousel
-                .about__list#about__carousel
-                    .about_slide
-                        .about__item
-                            .about__img-bg
-                                img(src="images/team_1.png" alt="team_1").about__img
-
-                    .about_slide
-                        .about__item
-                            .about__img-bg
-                                img(src="images/team_2.png" alt="team_2").about__img
-
-                    .about_slide
-                        .about__item
-                            .about__img-bg
-                                img(src="images/team_3.png" alt="team_3").about__img
-
-                    .about_slide
-                        .about__item
-                            .about__img-bg
-                                img(src="images/team_4.png" alt="team_4").about__img
-
-                    .about_slide
-                        .about__item
-                            .about__img-bg
-                                img(src="images/team_5.png" alt="team_5").about__img
-                //.someOtherSlider__nav
-                //    .someOtherSlider--next
-                //        i.fa.fa-angle-left
-                //    .someOtherSlider--prev
-                //        i.fa.fa-angle-right
-
-                .carousel-indicators
-                    li.isActive(data-target='#about__carousel' data-slide-to='0')
+            #about__carousel.carousel.slide(data-ride='.about_carousel')
+                // Indicators
+                ol.carousel-indicators
+                    li.active(data-target='#about__carousel' data-slide-to='0')
                     li(data-target='#about__carousel' data-slide-to='1')
                     li(data-target='#about__carousel' data-slide-to='2')
                     li(data-target='#about__carousel' data-slide-to='3')
                     li(data-target='#about__carousel' data-slide-to='4')
+
+                // Wrapper for slides
+                .about__list
+                    .carousel-inner
+                        .item.active
+                            img(src="images/about_1.png" alt="about_1").about__img
+                        .item
+                            img(src="images/about_1.png" alt="about_1").about__img
+                        .item
+                            img(src="images/about_1.png" alt="about_1").about__img
+                        .item
+                            img(src="images/about_1.png" alt="about_1").about__img
+                        .item
+                            img(src="images/about_1.png" alt="about_1").about__img
 
 
             .about__item--text

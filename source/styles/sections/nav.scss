@@ -7,9 +7,8 @@ $button-height: 27px;
 $button-width: 30px;
 
 .button_container {
-  position: absolute;
-  top: 77px;
-  right: 3px;
+  position: fixed;
+  right: 70px;
   height: $button-height;
   width: $button-width;
   cursor: pointer;
@@ -75,8 +74,11 @@ $button-width: 30px;
     opacity: .9;
     visibility: visible;
     height: 100%;
+    z-index: 10;
 
     li {
+      margin-bottom: 20px;
+      height: auto;
       animation: fadeInRight .5s ease forwards;
       animation-delay: .35s;
 
@@ -94,7 +96,7 @@ $button-width: 30px;
   nav {
     position: relative;
     height: 70%;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     font-size: 50px;
     font-family: $ff-main-bold;

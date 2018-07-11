@@ -35,7 +35,7 @@
 
     @media (max-width: 1080px) {
       margin: 0 auto;
-      width: 80%;
+      width: 100%;
       margin-bottom: 50px;
     }
   }
@@ -49,11 +49,6 @@
   color: #6b7981;
   text-align: left;
   background-color: rgba(2,22,35,0.71);
-
-  @media (min-width: 320px) and (max-width: 810px) {
-    width: 80%;
-    padding: 25px;
-  }
 
   &__input {
     background: transparent;
@@ -78,6 +73,11 @@
     background: #6eeee4;
     font-family: $ff-main-bold;
 
+    @media (max-width: 424px) {
+      line-height: 1.5;
+      padding: 10px 50px;
+    }
+
     &:hover {
       color: lighten(#214744, 7%);
       background: lighten(#6eeee4, 7%);
@@ -96,7 +96,7 @@
 
   @media (max-width: 1080px) {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -112,8 +112,11 @@
 .faq__map {
   margin-top: 20px;
 
-  iframe {
-    width: 100%;
+  @media (max-width: 1250px) {
+    img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 }
 

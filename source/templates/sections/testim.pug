@@ -4,80 +4,74 @@ section#testim.testim
             h2.title__header.title__uppercase what they says
             .title__text.title__uppercase Lorem ipsum dolor sit amet event landing template
 
-        .testim__carousel
+        #testim__carousel.carousel.slide(data-ride='.testim_carousel').testim_carousel
+            // Wrapper for slides
             .testim__list
-                .testim_slide
-                    .testim__item
-                        .testim__img-bg
+                .testim_carousel-inner
+                    .item.active
+                        .testim__content
                             img(src="images/team_1.png" alt="team_1").testim__img
+                            .testim__item--text
+                                h3.testim__header.title__uppercase Samanta Pall / UI/UX DESIGNER
 
-                    .testim__item--text
-                        h3.testim__header.title__uppercase Samanta Pall / UI/UX DESIGNER
+                                .testim__description
+                                    br
+                                    | Lorem Ipsum is simply dummy text of the printing and you
+                                    | standard dummy know that text ever since the 1500s, when an unknown printer took a galley of type
+                                    | and scrambled it to make a type specimen book.
+                    .item
+                        .testim__content
+                            img(src="images/team_2.png" alt="team_1").testim__img
+                            .testim__item--text
+                                h3.testim__header.title__uppercase AL RAYHAN / QA Tester
 
-                        .testim__description
-                            br
-                            | Lorem Ipsum is simply dummy text of the printing and you
-                            | standard dummy know that text ever since the 1500s, when an unknown printer took a galley of type
-                            | and scrambled it to make a type specimen book.
-
-                .testim_slide
-                    .testim__item
-                        .testim__img-bg
-                            img(src="images/team_2.png" alt="team_2").testim__img
-
-                    .testim__item--text
-                        h3.testim__header.title__uppercase AL RAYHAN / QA Tester
-
-                        .testim__description
-                            br
-                            | Lorem Ipsum is simply dummy text of the printing and you
-                            | standard dummy know that text ever since the 1500s, when an unknown printer took a galley of type
-                            | and scrambled it to make a type specimen book.
-
-                .testim_slide
-                    .testim__item
-                        .testim__img-bg
+                                .testim__description
+                                    br
+                                    | Lorem Ipsum is simply dummy text of the printing and you
+                                    | standard dummy know that text ever since the 1500s, when an unknown printer took a galley of type
+                                    | and scrambled it to make a type specimen book.
+                    .item
+                        .testim__content
                             img(src="images/team_3.png" alt="team_3").testim__img
+                            .testim__item--text
+                                h3.testim__header.title__uppercase Steve Pall / Web DESIGNER
 
-                    .testim__item--text
-                        h3.testim__header.title__uppercase Steve Pall / Web DESIGNER
-
-                        .testim__description
-                            br
-                            | Lorem Ipsum is simply dummy text of the printing and you
-                            | standard dummy know that text ever since the 1500s, when an unknown printer took a galley of type
-                            | and scrambled it to make a type specimen book.
-
-                .testim_slide
-                    .testim__item
-                        .testim__img-bg
+                                .testim__description
+                                    br
+                                    | Lorem Ipsum is simply dummy text of the printing and you
+                                    | standard dummy know that text ever since the 1500s, when an unknown printer took a galley of type
+                                    | and scrambled it to make a type specimen book.
+                    .item
+                        .testim__content
                             img(src="images/team_4.png" alt="team_4").testim__img
+                            .testim__item--text
+                                h3.testim__header.title__uppercase Jim Beam / Web DESIGNER
 
-                    .testim__item--text
-                        h3.testim__header.title__uppercase Jim Beam / Web DESIGNER
-
-                        .testim__description
-                            br
-                            | Lorem Ipsum is simply dummy text of the printing and you
-                            | standard dummy know that text ever since the 1500s, when an unknown printer took a galley of type
-                            | and scrambled it to make a type specimen book.
-
-                .testim_slide
-                    .testim__item
-                        .testim__img-bg
+                                .testim__description
+                                    br
+                                    | Lorem Ipsum is simply dummy text of the printing and you
+                                    | standard dummy know that text ever since the 1500s, when an unknown printer took a galley of type
+                                    | and scrambled it to make a type specimen book.
+                    .item
+                        .testim__content
                             img(src="images/team_5.png" alt="team_5").testim__img
+                            .testim__item--text
+                                h3.testim__header.title__uppercase Anna Jameson / UI/UX DESIGNER
 
-                    .testim__item--text
-                        h3.testim__header.title__uppercase Anna Jameson / UI/UX DESIGNER
+                                .testim__description
+                                    br
+                                    | Lorem Ipsum is simply dummy text of the printing and you
+                                    | standard dummy know that text ever since the 1500s, when an unknown printer took a galley of type
+                                    | and scrambled it to make a type specimen book.
 
-                        .testim__description
-                            br
-                            | Lorem Ipsum is simply dummy text of the printing and you
-                            | standard dummy know that text ever since the 1500s, when an unknown printer took a galley of type
-                            | and scrambled it to make a type specimen book.
 
-            .slider__nav
-                .slider__nav--prev
-                    i.fa.fa-angle-left
-                .slider__nav--next
-                    i.fa.fa-angle-right
+
+
+            // Controls
+            .controls
+                a.right.carousel-control(href='#testim__carousel' role='button' data-slide='next')
+                    span
+                        i.fa.fa-angle-right
+                a.left.carousel-control(href='#testim__carousel' role='button' data-slide='prev')
+                    span
+                        i.fa.fa-angle-left
