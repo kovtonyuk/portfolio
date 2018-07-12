@@ -93,6 +93,7 @@
 .faq__text {
   width: 44%;
   background-color: rgba(2,22,35,0.71);
+  padding: 30px 30px 0;
 
   @media (max-width: 1080px) {
     margin: 0 auto;
@@ -106,7 +107,6 @@
   line-height: 1.5;
   text-align: left;
   font-family: $ff-main-light;
-  margin: 30px 30px 0;
 
   @media (max-width: 600px) {
     margin-bottom: 30px;
@@ -117,10 +117,11 @@
   margin-top: 20px;
 
   @media (max-width: 1250px) {
-    img {
-      width: 100%;
-      margin-bottom: 20px;
-    }
+    margin-top: 40px;
+  }
+
+  img {
+    width: 100%;
   }
 
   @media (max-width: 600px) {
