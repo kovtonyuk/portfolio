@@ -140,21 +140,28 @@
         }
 
         var slidEvent = $.Event('slid.bs.carousel', { relatedTarget: relatedTarget, direction: direction }) // yes, "slid"
-        if ($.support.transition && this.$element.hasClass('slide')) {
-            $next.addClass(type)
-            $next[0].offsetWidth // force reflow
-            $active.addClass(direction)
-            $next.addClass(direction)
-            $active
-                .one('bsTransitionEnd', function () {
-                    $next.removeClass([type, direction].join(' ')).addClass('active')
-                    $active.removeClass(['active', direction].join(' '))
-                    that.sliding = false
-                    setTimeout(function () {
-                        that.$element.trigger(slidEvent)
-                    }, 0)
-                })
-                .emulateTransitionEnd(Carousel.TRANSITION_DURATION)
+        if ($.support.transition) {
+            if (this.$element.hasClass('slide')) {
+                $next.addClass(type)
+                $next[0].offsetWidth // force reflow
+                $active.addClass(direction)
+                $next.addClass(direction)
+                $active
+                    .one('bsTransitionEnd', function () {
+                        $next.removeClass([type, direction].join(' ')).addClass('active')
+                        $active.removeClass(['active', direction].join(' '))
+                        that.sliding = false
+                        setTimeout(function () {
+                            that.$element.trigger(slidEvent)
+                        }, 0)
+                    })
+                    .emulateTransitionEnd(Carousel.TRANSITION_DURATION)
+            } else {
+                $active.removeClass('active')
+                $next.addClass('active')
+                this.sliding = false
+                this.$element.trigger(slidEvent)
+            }
         } else {
             $active.removeClass('active')
             $next.addClass('active')
@@ -233,10 +240,3 @@
     })
 
 }(jQuery);
-
-
-$('.carousel').carousel({
-    interval: 5000,
-    pause: "hover",
-    wrap: true
-});

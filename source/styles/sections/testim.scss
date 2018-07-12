@@ -100,6 +100,18 @@
   }
 }
 
+.testim__team__position {
+  margin-left: 10px;
+  color: #757776;
+  font-family: $ff-main-light;
+  font-style: italic;
+  font-size: 1.2rem;
+
+  @media (max-width: 400px) {
+    font-size: 0.9rem;
+  }
+}
+
 /*------------ Carousel ------------*/
 // Wrapper for the slide container and indicators
 .testim_carousel {
