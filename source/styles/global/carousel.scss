@@ -47,6 +47,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: 1200px) {
+    margin: 0 50px;
+  }
 }
 
 .testim__carousel-indicators {
@@ -71,6 +75,10 @@
     height: 12px;
     background-color: #71f6eb;
   }
+
+  @media (max-width: 1080px) {
+    display: none;
+  }
 }
 
 
@@ -83,6 +91,10 @@
 
   a:first-child {
     margin-right: 28px;
+  }
+
+  @media (max-width: 1080px) {
+    margin: 0 auto;
   }
 }
 
