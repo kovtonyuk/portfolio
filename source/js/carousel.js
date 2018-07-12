@@ -7,6 +7,7 @@
     var Carousel = function (element, options) {
         this.$element    = $(element)
         this.$indicators = this.$element.find('.carousel-indicators')
+        this.$testim__indicators = this.$element.find('.testim__carousel-indicators')
         this.options     = options
         this.paused      = null
         this.sliding     = null
@@ -132,6 +133,12 @@
             $nextIndicator && $nextIndicator.addClass('active')
         }
 
+        if (this.$testim__indicators.length) {
+            this.$testim__indicators.find('.active').removeClass('active')
+            var $next__testim_Indicator = $(this.$testim__indicators.children()[this.getItemIndex($next)])
+            $next__testim_Indicator && $next__testim_Indicator.addClass('active')
+        }
+
         var slidEvent = $.Event('slid.bs.carousel', { relatedTarget: relatedTarget, direction: direction }) // yes, "slid"
         if ($.support.transition && this.$element.hasClass('slide')) {
             $next.addClass(type)
@@ -229,7 +236,7 @@
 
 
 $('.carousel').carousel({
-    interval: 5000,
+    interval: 50000,
     pause: "hover",
     wrap: true
 });

@@ -1,4 +1,4 @@
-/*------------ Carousel indicators ------------*/
+/*------------ Carousel indicators about section ------------*/
 .carousel-indicators {
   position: absolute;
   bottom: -70px;
@@ -27,49 +27,94 @@
   }
 }
 
-.carousel-caption {
-  position: absolute;
-  left: 15%;
-  right: 15%;
-  bottom: 20px;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: center;
-  .btn {
-    text-shadow: none;
+//.carousel-caption {
+//  position: absolute;
+//  left: 15%;
+//  right: 15%;
+//  bottom: 20px;
+//  z-index: 10;
+//  padding-top: 20px;
+//  padding-bottom: 20px;
+//  text-align: center;
+//  .btn {
+//    text-shadow: none;
+//  }
+//}
+
+/*------------ Carousel indicators testim section ------------*/
+.testim__controls {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.testim__carousel-indicators {
+  position: relative;
+  padding: 0;
+  z-index: 15;
+  list-style: none;
+  margin: 30px 190px;
+  li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #d0d0d0;
+  }
+  .active {
+    margin: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #71f6eb;
   }
 }
 
 
-/*------------ Carousel control ------------*/
+/*------------ Carousel testim control ------------*/
+.controls {
+  position: relative;
+  top: -11px;
+  z-index: 15;
+  list-style: none;
+
+  a:first-child {
+    margin-right: 28px;
+  }
+}
 
 .carousel-control {
-  position: absolute;
-  bottom: 0;
-  right: 14px;
   z-index: 15;
   padding-left: 0;
   list-style: none;
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
 
-  @media (max-width: 1200px) {
-    right: 62px;
-  }
-
-  @media (max-width: 1080px) {
-    right: 50%;
-    bottom: -20px;
-  }
-
-  &-next {
-    left: auto;
-    right: 0;
-  }
+  //@media (max-width: 1200px) {
+  //  right: 62px;
+  //}
+  //
+  //@media (max-width: 1080px) {
+  //  right: 50%;
+  //  bottom: -20px;
+  //}
   &:hover, &:focus {
     outline: 0;
     text-decoration: none;
   }
 
+  .fa-angle-right,
+  .fa-angle-left {
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 11px 22px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+
+    &:hover {
+      background: #71f6eb;
+    }
+  }
 }
