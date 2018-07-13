@@ -3,15 +3,16 @@ section.faq#faq
 
         .faq__list
             .faq__item.form__item
-                    form(method="post" action="#").form
+                    form#form(method="post" action="send.php").form
 
                         .form__fields
-                            input.form__input(type='text' placeholder="Your Name" autocomplete='text' data-valid='required')
-                            input.form__input(type='text' placeholder="Subject" autocomplete='text' data-valid='required')
-                            input.form__input(type="email" placeholder="Your email" autocomplete='email' data-valid='required' data-email)
-                            textarea.form__input(rows="10" cols="45" name="text" placeholder="Message")
+                            input.form__input(type='text' placeholder="Your Name" autocomplete='text' name='name' data-valid='required')
+                            input.form__input(type='text' placeholder="Subject" autocomplete='text' name='subject' data-valid='required')
+                            input.form__input(type="email" placeholder="Your email" autocomplete='email' name='email' data-valid='required')
+                            input.form__input.textarea(name="message" placeholder="Your message" required='required')
+                            input#btn_form.button.button--form.button--text-uppercase(type='submit' value="Submit message")
 
-                        button(type="submit").button.button--form.button--text-uppercase Submit message
+                        //button(type="submit").button.button--form.button--text-uppercase Submit message
 
             .faq__item.faq__text
                 .faq__description

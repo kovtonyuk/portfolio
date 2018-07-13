@@ -7,8 +7,8 @@ $(document).ready(function(){
             data: form_data,
             success: function () {
                 //код в этом блоке выполняется при успешной отправке сообщения
-                alert("Ваше сообщение отпрвлено!");
-                window.location.href = "#"
+                alert("Your message was sent to!");
+                window.location.href = "http://www.m-time.ho.ua/"
             }
         });
     });
