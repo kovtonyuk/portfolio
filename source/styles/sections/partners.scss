@@ -21,4 +21,8 @@
     margin: 0 50px;
     padding: 0 50px;
   }
+
+  @media (max-width: 330px) {
+    padding: 0;
+  }
 }

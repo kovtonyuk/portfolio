@@ -4,6 +4,10 @@
   background: #f8fafa;
   padding-bottom: 138px;
 
+  @media (max-width: 1080px) {
+    padding: 0;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;

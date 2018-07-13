@@ -80,7 +80,7 @@
 
     @media (max-width: 424px) {
       line-height: 1.5;
-      padding: 10px 50px;
+      padding: 10px 10px;
     }
 
     &:hover {
@@ -113,7 +113,7 @@
   text-align: left;
   font-family: $ff-main-light;
 
-  @media (max-width: 600px) {
+  @media (max-width: 1080px) {
     margin-bottom: 30px;
   }
 }

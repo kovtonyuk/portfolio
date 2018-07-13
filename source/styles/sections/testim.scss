@@ -15,17 +15,13 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-
-    //@media (max-width: 600px) {
-    //  padding: 0 20px;
-    //}
   }
 
   &__list {
     position: relative;
 
     @media (max-width: 1080px) {
-      margin: 50px;
+      margin: 40px 50px;
     }
 
     &:before {
@@ -72,7 +68,7 @@
     font-size: 1.375rem;
     font-family: $ff-main-bold;
 
-    @media (max-width: 400px) {
+    @media (max-width: 423px) {
       font-size: 1rem;
     }
   }
@@ -86,6 +82,7 @@
 
     @media (max-width: 400px) {
       font-size: .9rem;
+      padding-bottom: 0;
     }
   }
 
