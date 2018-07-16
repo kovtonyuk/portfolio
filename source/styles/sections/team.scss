@@ -22,6 +22,7 @@
   }
 
   &__list {
+    position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -59,55 +60,56 @@
   }
 
   &__description {
+    display: block;
+    max-width: 370px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto 10px;
+    width: 100%;
+    background: rgba(113,246,235,0.97);
     padding: 39px;
     text-align: left;
-    position: absolute;
-    top: 182px;
-    bottom: 22px;
-    left: 19px;
-    right: 15px;
-    opacity: 0;
     color: #132928;
-    transition: all 1s;
     z-index: 3;
 
-    &:before {
-      position: absolute;
-      left: 6%;
-      content: '';
-      border: 12px solid transparent;
-      border-bottom: 17px solid rgba(113,246,235,0.97);
-      top: -29px;
-    }
-
-    @media (max-width: 1080px) {
-      padding: 40px;
-    }
-
-    @media (max-width: 450px) {
-      padding: 20px;
-    }
-
-    @media (max-width: 350px) {
-      top: 140px;
-    }
-
-    &:hover {
-      margin: 0 auto 10px;
-      opacity: 1;
-      background: rgba(113,246,235,0.97);
-      cursor: pointer;
-      transition: all 1s;
-
-      @media (min-width: 1081px) and (max-width: 1300px) {
-        margin: 0 30px 10px;
-      }
-
-      @media (max-width: 450px) {
-        margin: 0 20px;
-        line-height: 1.5;
-      }
-    }
+    //&:before {
+    //  position: absolute;
+    //  left: 6%;
+    //  content: '';
+    //  border: 12px solid transparent;
+    //  border-bottom: 17px solid rgba(113,246,235,0.97);
+    //  top: -29px;
+    //}
+    //
+    //@media (max-width: 1080px) {
+    //  padding: 40px;
+    //}
+    //
+    //@media (max-width: 450px) {
+    //  padding: 20px;
+    //}
+    //
+    //@media (max-width: 350px) {
+    //  top: 140px;
+    //}
+    //
+    //&:hover {
+    //  margin: 0 auto 10px;
+    //  opacity: 1;
+    //  background: rgba(113,246,235,0.97);
+    //  cursor: pointer;
+    //  transition: all 1s;
+    //
+    //  @media (min-width: 1081px) and (max-width: 1300px) {
+    //    margin: 0 30px 10px;
+    //  }
+    //
+    //  @media (max-width: 450px) {
+    //    margin: 0 20px;
+    //    line-height: 1.5;
+    //  }
+    //}
   }
 
   &__header {
