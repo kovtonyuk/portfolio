@@ -1,14 +1,31 @@
 $(function(){
-    $('.mouseover_desc .mouseover_desc_item').append('<div class="mouseover_desc_text"></div>');
-    $('.mouseover_desc_text').each(function(){
-        $(this).text($(this).parent().children('img').attr('alt'));
-        $(this).width($(this).parent().width());
-        $(this).height($(this).parent().height());
+    $('.team__list .team__item');
+    // $('.team__description').each(function(){
+    //     $(this).text($(this).parent().children('img').attr('alt'));
+    //     $(this).width($(this).parent().width());
+    //     $(this).height($(this).parent().height());
+    // });
+    $('.team__item').mouseover(function(){
+        $(this).children('.team__description').fadeIn(500);
     });
-    $('.mouseover_desc_item').mouseover(function(){
-        $(this).children('.mouseover_desc_text').fadeIn(1000);
+    $('.team__item').mouseleave(function(){
+        $(this).children('.team__description').fadeOut(500);
     });
-    $('.mouseover_desc_item').mouseleave(function(){
-        $(this).children('.mouseover_desc_text').fadeOut(500);
+});
+
+/*------------ HOVER Services ------------*/
+
+$(function(){
+    $('.services__list .services__item');
+    // $('.team__description').each(function(){
+    //     $(this).text($(this).parent().children('img').attr('alt'));
+    //     $(this).width($(this).parent().width());
+    //     $(this).height($(this).parent().height());
+    // });
+    $('.services__item').mouseover(function(){
+        $(this).children('.services__description').fadeIn(1000);
+    });
+    $('.services__item').mouseleave(function(){
+        $(this).children('.services__description').fadeOut(500);
     });
 });

@@ -19,6 +19,7 @@
     font-family: $ff-main-light;
     font-style: italic;
     font-size: .9rem;
+    line-height: 1.5;
   }
 
   &__list {
@@ -31,22 +32,18 @@
 
     @media (max-width: 1300px) {
       justify-content: center;
+      margin: 0 20px;
     }
   }
 
   &__item {
     position: relative;
 
-    &:first-child {
-      margin-bottom: 5px;
-    }
-
     @media (max-width: 1300px) {
-      width: 38%;
+      margin-right: 20px;
     }
 
     @media (max-width: 1080px) {
-      width: auto;
       margin: 0 10px;
     }
 
@@ -61,11 +58,11 @@
 
   &__description {
     display: block;
-    max-width: 370px;
-    position: relative;
+    max-width: 336px;
+    position: absolute;
     bottom: 0;
     left: 0;
-    margin: 0 auto 10px;
+    margin: 0 16px 25px;
     width: 100%;
     background: rgba(113,246,235,0.97);
     padding: 39px;
@@ -73,43 +70,34 @@
     color: #132928;
     z-index: 3;
 
-    //&:before {
-    //  position: absolute;
-    //  left: 6%;
-    //  content: '';
-    //  border: 12px solid transparent;
-    //  border-bottom: 17px solid rgba(113,246,235,0.97);
-    //  top: -29px;
-    //}
-    //
-    //@media (max-width: 1080px) {
-    //  padding: 40px;
-    //}
-    //
-    //@media (max-width: 450px) {
-    //  padding: 20px;
-    //}
-    //
-    //@media (max-width: 350px) {
-    //  top: 140px;
-    //}
-    //
-    //&:hover {
-    //  margin: 0 auto 10px;
-    //  opacity: 1;
-    //  background: rgba(113,246,235,0.97);
-    //  cursor: pointer;
-    //  transition: all 1s;
-    //
-    //  @media (min-width: 1081px) and (max-width: 1300px) {
-    //    margin: 0 30px 10px;
-    //  }
-    //
-    //  @media (max-width: 450px) {
-    //    margin: 0 20px;
-    //    line-height: 1.5;
-    //  }
-    //}
+    @media (max-width: 450px) {
+      margin: 0 38px 25px;
+      width: 80%;
+    }
+
+    @media (max-width: 450px) {
+      margin: 0 34px 25px;
+      padding: 25px;
+    }
+
+    @media (max-width: 379px) {
+      margin: 0 32px 25px;
+      padding: 15px;
+    }
+
+    @media (max-width: 350px) {
+      margin: 0 27px 25px;
+      padding: 15px;
+    }
+
+    &:before {
+      position: absolute;
+      left: 6%;
+      content: '';
+      border: 12px solid transparent;
+      border-bottom: 17px solid rgba(113,246,235,0.97);
+      top: -29px;
+    }
   }
 
   &__header {
@@ -122,7 +110,6 @@
     }
 
     @media (max-width: 500px) {
-      margin-bottom: 0;
       font-size: 0.9rem;
     }
   }
