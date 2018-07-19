@@ -1,10 +1,5 @@
 $(function(){
     $('.team__list .team__item');
-    // $('.team__description').each(function(){
-    //     $(this).text($(this).parent().children('img').attr('alt'));
-    //     $(this).width($(this).parent().width());
-    //     $(this).height($(this).parent().height());
-    // });
     $('.team__item').mouseover(function(){
         $(this).children('.team__description').fadeIn(500);
     });
@@ -17,13 +12,9 @@ $(function(){
 
 $(function(){
     $('.services__list .services__item');
-    // $('.team__description').each(function(){
-    //     $(this).text($(this).parent().children('img').attr('alt'));
-    //     $(this).width($(this).parent().width());
-    //     $(this).height($(this).parent().height());
-    // });
+
     $('.services__item').mouseover(function(){
-        $(this).children('.services__description').fadeIn(1000);
+        $(this).children('.services__description').fadeIn(500);
     });
     $('.services__item').mouseleave(function(){
         $(this).children('.services__description').fadeOut(500);
