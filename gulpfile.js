@@ -45,19 +45,26 @@ gulp.task('styles:compile', function() {
 gulp.task('js', function() {
     return gulp.src([
             'source/js/init.js',
-            //'source/js/accordion.js',
-            //'source/js/accordion_faq.js',
             'source/js/scroll.js',
-            //'source/js/form.js',
             'source/js/send_form.js',
-            //'source/js/main.js',
             'source/js/toggle_menu.js',
-            //'source/js/carousel__test.js'
             'source/js/carousel.js',
             'source/js/hover.js'
         ])
         .pipe(sourcemaps.init())
         .pipe(concat('main.min.js'))
+        .pipe(uglify())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('build/js'));
+});
+
+/*------------ jQuery ------------*/
+gulp.task('jquery', function() {
+    return gulp.src([
+        'source/js/jquery.js'
+    ])
+        .pipe(sourcemaps.init())
+        .pipe(concat('jquery.min.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('build/js'));
@@ -114,7 +121,7 @@ gulp.task('watch', function() {
 /*------------ Default ------------*/
 gulp.task('default', gulp.series(
     'clean',
-    gulp.parallel('templates:compile', 'styles:compile', 'js', 'sprite', 'copy'),
+    gulp.parallel('templates:compile', 'styles:compile', 'js', 'jquery', 'sprite', 'copy'),
     gulp.parallel('watch', 'server')
     )
 );
