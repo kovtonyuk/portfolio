@@ -2,9 +2,9 @@ section.faq#faq
     .container
 
         .faq__list
+            //Form
             .faq__item.form__item
                     form#form(method="post" action="send.php").form
-
                         .form__fields
                             input.form__input(type='text' placeholder="Your Name" autocomplete='on' name='name' data-valid='required')
                             input.form__input(type='text' placeholder="Subject" autocomplete='on' name='subject' data-valid='required')
@@ -12,6 +12,7 @@ section.faq#faq
                             input.form__input.textarea(name="message" placeholder="Your message" required='required')
                             input#btn_form.button.button--form.button--text-uppercase(type='submit' value="Submit message")
 
+            //Text about company
             .faq__item.faq__text
                 .faq__description
                     | Adress line 1
